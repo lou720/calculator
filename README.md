@@ -1,7 +1,7 @@
 # Calculator
 This simple project is a calculator usable from terminal. 
 
-## Structur
+## Structure
 calculator/
 ├─ src/                
 │  ├─ main.cpp
