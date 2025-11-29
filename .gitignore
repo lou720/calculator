@@ -8,3 +8,5 @@
 *.so
 *.a
 *.obj
+
+.clang-format
