@@ -1,0 +1,10 @@
+# Eseguibili
+/build/
+*.o
+*.out
+*.exe
+*.bin
+*.dll
+*.so
+*.a
+*.obj
