@@ -1,35 +1,23 @@
 #include <iostream>
+#include <vector>
 
 #include "calculator.hpp"
+#include "user_input.hpp"
+#include "utils.hpp"
 
 int main() {
-  double a, b;
-  char op;
+  std::cout << "Inserisci espressione (es: 5 * 3 - 4): \n";
+  std::string stringInput;
+  std::getline(std::cin, stringInput);
 
-  std::cout << "Inserisci operazione (es: 5 * 3): ";
-  std::cin >> a >> op >> b;
+  std::vector<char> vectorInput = to_char_vector(stringInput);
+  
+  int index{0};
+  for (char element : vectorInput) {
 
-  try {
-    double result;
-    switch (op) {
-      case '+':
-        result = add(a, b);
-        break;
-      case '-':
-        result = sub(a, b);
-        break;
-      case '*':
-        result = mul(a, b);
-        break;
-      case '/':
-        result = div(a, b);
-        break;
-      default:
-        std::cerr << "Operatore non valido\n";
-        return 1;
+    if (element == '+') {
+      
     }
-    std::cout << "Risultato: " << result << "\n";
-  } catch (const std::exception &e) {
-    std::cerr << "Errore: " << e.what() << "\n";
+    ++index;
   }
 }
